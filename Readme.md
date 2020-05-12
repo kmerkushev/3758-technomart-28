@@ -1,7 +1,7 @@
 ﻿# Личный проект «Техномарт»
 
 * Студент: [Константин Меркушев](https://up.htmlacademy.ru/htmlcss/28/user/3758).
-* Наставник: [Дмитрий Аверин](https://htmlacademy.ru/profile/id1061531).
+* Наставник: [Анатолий Пазюк](https://htmlacademy.ru/profile/id380487).
 
 ---
 
