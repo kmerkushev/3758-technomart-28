@@ -76,32 +76,26 @@
 
 			<h2>ПЕРФОРАТОРЫ</h2>
 			<aside>
+					<form action="https://echo.htmlacademy.ru/courses" method="post" id="catalog-filter">
+						<fieldset>
+							<legend>Производители:</legend>
+							<label><input type="checkbox" name="check-bosch" value="bosch">Bosch</label>
+							<label><input type="checkbox" name="check-interskol" value="interskol">Интерскол</label>
+							<label><input type="checkbox" name="check-makita" value="makita">Makita</label>
+							<label><input type="checkbox" name="check-dewalt" value="dewalt">Dewalt</label>
+							<label><input type="checkbox" name="check-hitachi" value="hitachi">Hitachi</label>
+						</fieldset>
 
-				<hr>
+						<hr>
 
-				<article>
-					<h4>ПРОИЗВОДИТЕЛИ:</h4>
-					<ul>
-						<li><span></span>BOSCH</li>
-						<li><span></span>ИНТЕРСКОЛ</li>
-						<li><span></span>MAKITA</li>
-						<li><span></span>DEWALT</li>
-						<li><span></span>HITACHI</li>
-					</ul>
-				</article>
+						<fieldset>
+							<legend>Питание:</legend>
+							<label><input type="radio" name="radio-supply" value="battery" checked>Аккумуляторные</label>
+							<label><input type="radio" name="radio-supply" value="mains">Сетевые</label>
+						</fieldset>
 
-				<hr>
-
-				<article>
-					<h4>ПИТАНИЕ:</h4>
-					<ul>
-						<li><span></span>АККУМУЛЯТОРНЫЕ</li>
-						<li><span></span>СЕТЕВЫЕ</li>
-					</ul>
-				</article>
-
-				<button type="button" name="show"></button>
-
+						<button type="submit" form="catalog-filter" name="show">Показать</button>
+					</form>
 			</aside>
 
 			<ul>
@@ -292,6 +286,13 @@
 			</p>
 		</div>
 	</footer>
+
+	<section>
+		<p>Товар добавлен в корзину!</p>
+		<button aria-label="Закрыть попап">Закрыть</button>
+		<button>Оформить заказ</button>
+		<button>Продолжить покупки</button>
+	</section>
 
 </body>
 
