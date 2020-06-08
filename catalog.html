@@ -79,11 +79,11 @@
 				<h3>Фильтр:</h3>
 				<form action="https://echo.htmlacademy.ru/courses" method="post">
 					<h4>Сортировка</h4>
-					<button type="button" name="sort-price">По цене</button>
-					<button type="button" name="sort-price">По типу</button>
-					<button type="button" name="sort-price">По функционалу</button>
-					<button type="button" name="sort-to-high" aria-label="По возрастанию"></button>
-					<button type="button" name="sort-to-low" aria-label="По убыванию"></button>
+					<a href="">По цене</a>
+					<a href="">По типу</a>
+					<a href="">По функционалу</a>
+					<a href="" aria-label="По возрастанию"></a>
+					<a href="" aria-label="По убыванию"></a>
 				</form>
 			</div>
 
@@ -91,10 +91,17 @@
 					<form action="https://echo.htmlacademy.ru/courses" method="post" id="catalog-filter">
 						<fieldset>
 							<legend>Цена:</legend>
-							<input type="range" name="range-price" min="0" max="300" step="5" value="300">
-							<input type="text" name="range-input" value="0">
-							<span>—</span>
-							<input type="text" name="range-input" value="300">
+							<div aria-label="Ввод диапазона цен с помощью ползунка">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+							<div aria-label="Ввод диапазона цен вручную">
+								<input type="range" name="range-price" min="0" max="300" step="5" value="300">
+								<input type="text" name="range-input-min" value="0" aria-label="Ввод минимальной цены">
+								<span>—</span>
+								<input type="text" name="range-input-max" value="300" aria-label="Ввод максимальной цены">
+							</div>							
 						</fieldset>
 						<fieldset>
 							<legend>Производители:</legend>
@@ -266,12 +273,12 @@
 				</li>
 			</ul>
 
-			<nav aria-label="Навигация по страницам">
-				<button type="button" name="go-to-page">1</button>
-				<button type="button" name="go-to-page">2</button>
-				<button type="button" name="go-to-page">3</button>
-				<button type="button" name="go-to-next-page">Следующая</button>
-			</nav>
+			<div aria-label="Навигация по страницам">
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">Следующая</a>
+			</div>
 
 		</section>
 
