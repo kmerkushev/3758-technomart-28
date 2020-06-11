@@ -1,8 +1,633 @@
+/* Variables */
+:root {
+  --black: #000000;
+
+  --white: #ffffff;
+	--dark-white: #F3F7F9;
+	--pale-white: rgba(255, 255, 255, 0.5);
+
+	--light-grey-button: #C5C5C5;
+  --light-grey: #EAEAEA;
+  --grey: #F9F5F0;
+	--grey-border: #E5E5E5;
+  --dark-grey: #A9A9A9;
+	--dark-grey-border: #98A0AD;
+
+  --yellow: #FFD180;
+	--pale-yellow: rgba(255, 209, 128, 0.5);
+
+  --green: #63A63E;
+	--green-hover: #5FBB2D;
+	--green-active: #518534;
+
+  --light-blue: #F3F7F8;
+  --blue: #32425C;
+  --dark-blue: #293449;
+  --deep-blue: #212A3A;
+	--black-blue: #161D29;
+
+
+  --red: #EE3643;
+  --dark-red: #B52933;
+	--dark-red-hover: #BA2732;
+
+	--red-border: #B52933;
+	--red-border-active:#8D1E26;
+
+  --red-active: #BA2732;
+
+
+  --special-sea-green: #39D390;
+  --special-yellow: #FFBF47;
+  --special-sky-blue: #3BBCE3;
+  --special-purple: #DC91D8;
+  --special-green: #8ED78F;
+}
+
+/* Fonts */
+/* cuprum-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+    url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* cuprum-italic - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Cuprum Italic'), local('Cuprum-Italic'),
+    url('../fonts/cuprum-v11-latin_cyrillic-italic.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* cuprum-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cuprum Bold'), local('Cuprum-Bold'),
+    url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+    url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+    url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Global */
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+input[type="text"] {
+	padding: 0;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-  …
+}
+
+/* Header */
+header {
+  background-color: var(--light-blue);
+}
+
+.header-top {
+	font-size: 18px;
+	line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--dark-blue);
+  height: 42px;
+}
+
+.header-top a {
+	color: var(--white);
+}
+
+.header-top .logo {
+  background-color: var(--red);
+  padding: 13px 55px;
+  border-bottom: 5px solid var(--red-border);
+  margin-top: 12px;
+}
+
+.header-top .logo:hover {
+}
+
+.header-top .logo:active {
+  background-color: var(--red-active);
+  border-bottom-color: var(--red-border-active);
+}
+
+.header-top .search {
+  height: inherit;
+}
+
+.header-top .search label {
+	margin-top: 9px;
+}
+
+.header-top .search input {
+  border: none;
+  height: 100%;
+	color: var(--white);
+  background-color: var(--dark-blue);
+  background: url("../img/icon-search.svg") no-repeat left center;
+	background-position: 17px center;
+	padding-left: 40px;
+}
+
+.header-top .search input:focus {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.bookmark {
+	background-color: var(--dark-blue);
+	background: url("../img/icon-bookmark.svg") no-repeat left center;
+	padding-left: 21px;
+}
+
+.cart {
+	background-color: var(--dark-blue);
+	background: url("../img/icon-cart.svg") no-repeat left center;
+	padding-left: 21px;
+}
+
+.not-empty {
+	background-color: var(--red);
+}
+
+.bookmark:hover, .cart:hover {
+	background-color: var(--black-blue);
+	color: var(--pale-white);
+}
+
+.header-top a[type="button"] {
+	background-color: var(--green);
+	text-align: center;
+}
+
+.header-top a[type="button"]:hover {
+	background-color: var(--green-hover);
+	text-align: center;
+}
+
+.header-top a[type="button"]:active {
+	background-color: var(--green);
+	text-align: center;
+	color: var(--pale-white);
+}
+
+header h1 {
+	background-color: inherit;
+	font-style:italic;
+	color: var(--red);
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: 400;
+}
+
+header .phone {
+	font-size: 21px;
+	line-height: 30px;
+	color: var(--red);
+	font-weight: 700;
+	background-color: inherit;
+	background: url("../img/icon-phone.svg") no-repeat left center;
+	padding-left: 36px;
+}
+
+header .address {
+	font-size: 14px;
+	line-height: 24px;
+	color: var(--red);
+	font-weight: 400;
+	background-color: inherit;
+	color: var(--blue);
+}
+
+header button {
+	border: none;
+	font-size: 21px;
+	line-height: 21px;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+header button:hover {
+	color: var(--red);
+}
+
+header button:active {
+	color: var(--light-grey-button);
+}
+
+header button[name="login"] {
+	background-image: url("../img/icon-login.svg");
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+
+.user li:nth-child(1) a:nth-child(1) {
+	background-color: var(--white);
+	background-image: url("../img/icon-user.svg");
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: var(--black);
+	font-size: 21px;
+	line-height: 21px;
+	text-align: center;
+}
+
+.user li:nth-child(1) a:nth-child(2) {
+	height: 18px;
+	padding-left: 20px;
+	background-color: var(--white);
+	background-image: url("../img/icon-login.svg");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.user li:nth-child(n+1), .user li:nth-child(n+1) a {
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: var(--blue);
+}
+
+.user li:nth-child(n+1):hover, .user li:nth-child(n+1) a:hover {
+	color: var(--red);
+}
+
+.user li:nth-child(n+1):active, .user li:nth-child(n+1) a:active {
+	color: var(--light-grey-button);
+}
+
+header nav ul {
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--white);
+	background-color: var(--blue);
+	border-bottom: 5px solid var(--dark-blue);
+}
+
+header nav a {
+	color: var(--white);
+}
+
+header nav a:hover {
+	color: var(--white);
+	background-color: var(--dark-blue);
+}
+
+header nav a:active {
+	color: var(--pale-white);
+	background-color: var(--dark-blue);
+}
+
+/* Main content */
+.about, .contacts {
+	background-color: var(-white);
+}
+
+.about h2, .contacts h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.about p, .contacts p {
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color: var(--black);
+}
+
+.about ul {
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--black);
+}
+
+.about a, .contacts a {
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+	background-color: var(--red);
+}
+
+.about a:active, .contacts a:active {
+	background-color: var(--dark-red-hover);
+}
+
+/* Footer */
+footer {
+	color: var(--dark-white);
+}
+
+footer a img {
+	background-color: var(--red);
+	border-bottom: 5px solid var(--dark-red);
+}
+
+.footer-top {
+	background-color: var(--blue);
+}
+
+.footer-top p {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.footer-top li a {
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--white);
+}
+
+.footer-top li:nth-child(n+5) a {
+	color: var(--yellow);
+}
+
+.footer-top li a:hover {
+	text-decoration: underline;
+}
+
+.footer-top li a:active {
+	text-decoration: none;
+	color: var(--pale-yellow);
+}
+
+.footer-bottom {
+	background-color: var(--dark-blue);
+}
+
+.footer-bottom p {
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--white);
+}
+
+.footer-bottom li {
+	background-color: var(--deep-blue);
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+}
+
+.footer-bottom li:hover, .footer-bottom li:active {
+	background-color: var(--red);
+}
+
+.footer-bottom li:nth-child(1) {
+	background-image: url("../img/icon-vk.svg");
+}
+
+.footer-bottom li:nth-child(2) {
+	background-image: url("../img/icon-fb.svg");
+}
+
+.footer-bottom li:nth-child(3) {
+	background-image: url("../img/icon-insta.svg");
+}
+
+.footer-bottom .footer-links-wrapper a {
+	color: var(--yellow);
+}
+
+.footer-bottom .footer-links-wrapper a:hover {
+	text-decoration: underline;
+}
+
+.footer-bottom .footer-links-wrapper a:active {
+	color: var(--red);
+	text-decoration: none;
+}
+
+.popup-map, .popup-feedback {
+	display: none;
+}
+
+
+/* Catalog*/
+.breadcrumbs a {
+	font-family: "PT Sans", Arial, sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.breadcrumbs a:hover {
+	color: var(--red);
+}
+
+.breadcrumbs a:active {
+	color: var(--light-grey-button);
+}
+
+.breadcrumbs li:nth-child(1) {
+	width: 14px;
+	height: 12px;
+	background-color: var(--white);
+	background-image: url("../img/icon-home.svg");
+	background-repeat: no-repeat;
+}
+
+.breadcrumbs li:nth-child(2n) {
+	width: 14px;
+	height: 12px;
+	background-color: var(--white);
+	background-image: url("../img/icon-right-small.svg");
+	background-repeat: no-repeat;
+}
+
+.catalog {
+	font-family: "PT Sans", Arial, sans-serif;
+	color: var(--black);
+}
+
+.catalog h2 {
+	font-family: "Cuprum", Arial, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--blue);
+	background-color: var(--light-blue);
+}
+
+.catalog legend {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.catalog label {
+	font-size: 15px;
+	line-height: 19px;
+	text-transform: uppercase;
+}
+
+.catalog button[type="submit"] {
+	font-family: "Cuprum", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: center;
+	color: var(--black);
+	border: 1px solid var(--grey-border);
+	background-color: var(--white);
+	text-transform: uppercase;
+}
+
+.catalog button[type="submit"]:hover {
+	border: 1px solid var(--light-grey-button);
+}
+
+.catalog button[type="submit"]:active {
+	border: 1px solid var(--red);
+}
+
+.item {
+	border: 1px solid var(--grey-border);
+}
+
+.item h5 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	color: var(--black);
+}
+
+.item s {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--dark-grey);
+}
+
+.item .price {
+	font-weight: 700;
+	background-color: var(--red);
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+.button-buy {
+	font-family: "Cuprum", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+	background-color: var(--green);
+	background-image: url("../img/icon-cart.svg");
+	background-position: left center;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+}
+
+.button-buy:hover {
+	background-color: var(--green-hover);
+}
+
+.button-buy:hover {
+	background-color: var(--green-active);
+}
+
+.button-bookmark {
+	font-family: "Cuprum", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 3px solid var(--green);
+	border-radius: 2px;
+	color: var(--blue);
+	background-color: var(--white);
+}
+
+.button-bookmark:hover {
+	border: 3px solid var(--blue);
+}
+
+.button-bookmark:active {
+	color: var(--dark-grey-border);
+	border: 3px solid var(--dark-grey-border);
+}
+
+.popup-added-to-cart {
+	display: none;
 }

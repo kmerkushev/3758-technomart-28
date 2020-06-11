@@ -4,24 +4,25 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Техномарт</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
 	<header>
+		<div class="header-top">
+			<a href="index.html"><img class="logo" src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт"></a>
 
-		<div>
-			<a href="index.html"><img src="img/logo-technomart.svg" width="107" height="17" alt="Техномарт"></a>
-
-			<form>
-				<label for="fsearch">Поиск:</label><br>
-				<input type="text" id="fsearch" name="fsearch"><br>
+			<form class="search">
+				<label for="fsearch" class="visually-hidden">Поиск:</label>
+				<input type="text" id="fsearch" name="fsearch" placeholder="Поиск:">
 			</form>
 
-			<a href="">Закладки: <span>0</span></a>
-			<a href="">Корзина: <span>0</span></a>
-			<a href="">Оформить заказ</a>
+			<div>
+				<a class="bookmark" href="">Закладки: <span>0</span></a>
+				<a class="cart" href="">Корзина: <span>0</span></a>
+				<a type="button" href="">Оформить заказ</a>
+			</div>
 		</div>
 
 		<div>
@@ -31,8 +32,8 @@
 			</h1>
 
 			<div>
-				<p>+7 (812) 555-05-55</p>
-				<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+				<p class="phone">+7&nbsp;(812)&nbsp;555-05-55</p>
+				<p class="address">г.&nbsp;Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д.&nbsp;19/8</p>
 			</div>
 
 			<article>
@@ -52,12 +53,10 @@
 				<li><a href="">Контакты</a></li>
 			</ul>
 		</nav>
-
 	</header>
 
 
 	<main>
-
 		<section>
 			<h2 class="visually-hidden">Промо-блок</h2>
 			<article>
@@ -199,7 +198,7 @@
 					</div>
 					<div>
 						<h3>Гарантия</h3>
-						<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.  Дом уж восстановите как-нибудь сами.</p>
+						<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
 						<span class="decor"></span>
 					</div>
 					<div>
@@ -212,7 +211,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section class="about">
 			<h2>Компания «Техномарт»</h2>
 			<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для&nbsp;ремонта и&nbsp;строительства не&nbsp;оставит равнодушными любителей сэкономить на&nbsp;гастарбайтерах.</p>
 			<p>Мы можем доставить ваш товар в&nbsp;самые отдаленные точки России!<br>
@@ -225,7 +224,7 @@
 			<a href="">ПОДРОБНЕЕ О&nbsp;КОМПАНИИ</a>
 		</section>
 
-		<section>
+		<section class="contacts">
 			<h2>КОНТАКТЫ</h2>
 			<p>Вы можете забрать товар сами, <br>
 				заехав в наш офис:</p>
@@ -239,13 +238,13 @@
 
 
 	<footer>
-		<div>
+		<div class="footer-top">
 			<div>
 				<a href="index.html"><img src="img/logo-technomart.svg" width="220" height="68" alt="Техномарт"></a>
 
 				<div>
-					<p>+7&nbsp;(812)&nbsp;555-05-55</p>
 					<p>г.&nbsp;Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д.&nbsp;19/8</p>
+					<p>+7&nbsp;(812)&nbsp;555-05-55</p>
 				</div>
 
 			</div>
@@ -265,34 +264,36 @@
 			</nav>
 		</div>
 
-		<div>
+		<div class="footer-bottom">
 			<p>© 2010–2019 Компания «Техномарт»<br>
 				Все права защищены</p>
 
 			<ul>
-				<li><a href="">VK</a></li>
-				<li><a href="">Fb</a></li>
-				<li><a href="">Inst</a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
 			</ul>
 
-			<p>Обратная связь:<br>
-				<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-			</p>
+			<div class="footer-links-wrapper">
+				<p>Обратная связь:<br>
+					<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+				</p>
 
-			<p>Разработано —<br>
-				<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
-			</p>
+				<p>Разработано —<br>
+					<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+				</p>
+			</div>
 		</div>
 	</footer>
 
-	<section>
+	<section class="popup-map">
 		<div>
 			<img src="img/map-popup.png" width="943" alt="Карта проезда">
 			<button aria-label="Закрыть попап с картой">Закрыть</button>
 		</div>
 	</section>
 
-	<section>
+	<section class="popup-feedback">
 		<form action="https://echo.htmlacademy.ru/courses" method="post" id="message-us">
 			<label for="name">Ваше имя:</label>
 			<input type="text" name="name" id="name" placeholder="Имя Фамилия">
@@ -308,7 +309,5 @@
 
 		<button aria-label="Закрыть попап обратной связи">Закрыть</button>
 	</section>
-
 </body>
-
 </html>
