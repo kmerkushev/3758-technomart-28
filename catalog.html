@@ -32,7 +32,7 @@
 			</h1>
 
 			<div>
-				<p class="phone">+7&nbsp;(812)&nbsp;555-05-55</p>
+				<p class="phone"><a href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a></p>
 				<p class="address">г.&nbsp;Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д.&nbsp;19/8</p>
 			</div>
 
@@ -78,10 +78,10 @@
 		<section class="catalog">
 			<h2>ПЕРФОРАТОРЫ</h2>
 
-			<div>
+			<div class="filter">
 				<h3>Фильтр:</h3>
 				<form action="https://echo.htmlacademy.ru/courses" method="post">
-					<h4>Сортировка</h4>
+					<h4>Сортировка:</h4>
 					<a href="">По цене</a>
 					<a href="">По типу</a>
 					<a href="">По функционалу</a>
@@ -92,26 +92,31 @@
 
 			<aside>
 					<form action="https://echo.htmlacademy.ru/courses" method="post" id="catalog-filter">
-						<fieldset>
+						<fieldset class="filter-price">
 							<legend>Цена:</legend>
-							<div aria-label="Ввод диапазона цен с помощью ползунка">
-								<div></div>
-								<div></div>
-								<div></div>
+							<div class="filter-range" aria-label="Ввод диапазона цен с помощью ползунка">
+								<div class="range-round"></div>
+								<div class="range-line"></div>
+								<div class="range-round"></div>
+								<div class="range-line-background"></div>
 							</div>
 							<div aria-label="Ввод диапазона цен вручную">
-								<input type="range" name="range-price" min="0" max="300" step="5" value="300">
-								<input type="text" name="range-input-min" value="0" aria-label="Ввод минимальной цены">
+								<input type="text" name="range-input-min" value="0" aria-label="Минимальная цена">
 								<span>—</span>
-								<input type="text" name="range-input-max" value="300" aria-label="Ввод максимальной цены">
+								<input type="text" name="range-input-max" value="30000" aria-label="Максимальная цена">
 							</div>
 						</fieldset>
+
 						<fieldset>
 							<legend>Производители:</legend>
 							<ul>
 								<li>
 									<label for="check-bosch">Bosch</label>
 									<input type="checkbox" name="check-bosch" id="check-bosch" value="bosch">
+								</li>
+								<li>
+									<label for="check-bosch">Интерскол</label>
+									<input type="checkbox" name="check-interskol" id="check-interskol" value="bosch">
 								</li>
 								<li>
 									<label for="check-makita">Makita</label>
@@ -276,7 +281,7 @@
 				</li>
 			</ul>
 
-			<div aria-label="Навигация по страницам">
+			<div class="pagination" aria-label="Навигация по страницам">
 				<a href="">1</a>
 				<a href="">2</a>
 				<a href="">3</a>
@@ -285,7 +290,7 @@
 
 		</section>
 
-		<section>
+		<section class="catalog-about">
 			<h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
 			<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
 				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
@@ -302,7 +307,7 @@
 
 				<div>
 					<p>г.&nbsp;Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д.&nbsp;19/8</p>
-					<p>+7&nbsp;(812)&nbsp;555-05-55</p>
+					<p><a href="tel:+78125550555">+7&nbsp;(812)&nbsp;555-05-55</a></p>
 				</div>
 
 			</div>
